@@ -1,0 +1,20 @@
+{% extends 'learning_logs/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block page_header %}
+  <h3>New topic</h3>
+{% endblock page_header %}
+
+{% block content %}
+
+    <form action="{% url 'learning_logs:new_topic' %}" method='post'>
+        <label class="form-label">Enter a new topic: </label>
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% bootstrap_button button_type="submit" content="Submit" %}
+  </form>
+
+    
+
+
+{% endblock content %}

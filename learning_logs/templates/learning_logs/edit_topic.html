@@ -1,0 +1,19 @@
+{% extends 'learning_logs/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block page_header %}
+  <h2>Edit topic </h2>
+{% endblock page_header %}
+
+{% block content %}
+
+    <form action="{% url 'learning_logs:edit_topic' topic.id %}" method='post'>
+        <label class="form-label">Edit a topic: </label>
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% bootstrap_button button_type="submit" content="Submit" %}
+    </form>
+
+    <a href="{% url 'learning_logs:topic_delete' topic.id %}" class ="btn btn-danger my-4">Delete</a>
+
+{% endblock content %} 
