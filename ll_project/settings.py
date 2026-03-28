@@ -28,8 +28,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG') == 'True' # Access boolean values with a condition
 
 ALLOWED_HOSTS = [
-    'learning-log-sigma.vercel.app',
-    '.vercel.app',  # Wildcard for all Vercel subdomains
     '127.0.0.1',
     'localhost',
 ]
