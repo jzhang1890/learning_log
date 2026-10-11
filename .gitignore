@@ -1,0 +1,32 @@
+# Environment variables and secrets
+.env*
+!.env.example
+
+# Vercel
+.vercel
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+ll_env/
+venv/
+env/
+ENV/
+
+# Database
+*.sqlite3
+*.sqlite3-journal
+
+# Node
+node_modules/
+npm-debug.log*
+
+# macOS and editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
